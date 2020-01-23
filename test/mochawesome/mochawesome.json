@@ -1,0 +1,469 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 13,
+    "passes": 13,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-23T23:45:37.440Z",
+    "end": "2020-01-23T23:45:37.445Z",
+    "duration": 5,
+    "testsRegistered": 13,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "65b96bb7-0acc-4175-a3b4-4baa402e9fc6",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96a1b365-d133-4603-9005-87bb58d1b116",
+          "title": "pluck",
+          "fullFile": "/home/szczepan/dev_projects/JavaScript/Array Extensions/exray/test/exrayTest.js",
+          "file": "/test/exrayTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should pluck values using the 'name' prop",
+              "fullTitle": "pluck should pluck values using the 'name' prop",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const users = new Exray(\n  { name: 'Stinky Pete' },\n  { name: 'Heckus Redeckus' }\n)\nconst names = users.pluck('name')\nexpect(names).to.deep.equal(['Stinky Pete', 'Heckus Redeckus'])",
+              "err": {},
+              "uuid": "f84212f7-5530-4e83-8d29-e32132cf6709",
+              "parentUUID": "96a1b365-d133-4603-9005-87bb58d1b116",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f84212f7-5530-4e83-8d29-e32132cf6709"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "db84ca1a-9ee4-444d-9152-e5e1f6a743b9",
+          "title": "times",
+          "fullFile": "/home/szczepan/dev_projects/JavaScript/Array Extensions/exray/test/exrayTest.js",
+          "file": "/test/exrayTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return an array containing the indices 0 and 1",
+              "fullTitle": "times should return an array containing the indices 0 and 1",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const numbers = Exray.times(2, i => i);\nexpect(numbers).to.deep.equal([0, 1]);",
+              "err": {},
+              "uuid": "30ddc6aa-2c95-4b9b-a712-fa42fd43ba56",
+              "parentUUID": "db84ca1a-9ee4-444d-9152-e5e1f6a743b9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "30ddc6aa-2c95-4b9b-a712-fa42fd43ba56"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "10d7a69c-6e83-45bd-8b70-b9b79a5a6318",
+          "title": "tapping and piping",
+          "fullFile": "/home/szczepan/dev_projects/JavaScript/Array Extensions/exray/test/exrayTest.js",
+          "file": "/test/exrayTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should execute callback one time",
+              "fullTitle": "tapping and piping should execute callback one time",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let i = 0;\nnew Exray(1, 2, 3).tap(arr => i = i + 1);\nexpect(i).to.equal(1);",
+              "err": {},
+              "uuid": "ad9b9301-6d38-435b-a96d-455d11ab0c3e",
+              "parentUUID": "10d7a69c-6e83-45bd-8b70-b9b79a5a6318",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return original array when tapping",
+              "fullTitle": "tapping and piping should return original array when tapping",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const exray = new Exray(1, 2, 3).tap(() => 10);\nexpect(exray).to.deep.equal([1, 2, 3]);",
+              "err": {},
+              "uuid": "3a984e12-63a1-4856-b6ed-7506497e3626",
+              "parentUUID": "10d7a69c-6e83-45bd-8b70-b9b79a5a6318",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should return result of pipe",
+              "fullTitle": "tapping and piping should return result of pipe",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const piped = new Exray(1, 2, 3).pipe(array => array.length);\nexpect(piped).to.equal(3);",
+              "err": {},
+              "uuid": "7f14b39c-a0b1-451f-b2af-378a784c2037",
+              "parentUUID": "10d7a69c-6e83-45bd-8b70-b9b79a5a6318",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ad9b9301-6d38-435b-a96d-455d11ab0c3e",
+            "3a984e12-63a1-4856-b6ed-7506497e3626",
+            "7f14b39c-a0b1-451f-b2af-378a784c2037"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "748f0b10-9313-45ee-92cd-68a2873faf9c",
+          "title": "mod",
+          "fullFile": "/home/szczepan/dev_projects/JavaScript/Array Extensions/exray/test/exrayTest.js",
+          "file": "/test/exrayTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should take in a function and modify the array in place",
+              "fullTitle": "mod should take in a function and modify the array in place",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const exray = new Exray(1, 2, 3);\nexray.mod(el => el * 2);\nexpect(exray).to.deep.equal([2, 4, 6])",
+              "err": {},
+              "uuid": "65953bb9-96d4-48e4-b7bb-04e571e3d080",
+              "parentUUID": "748f0b10-9313-45ee-92cd-68a2873faf9c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should optionally evaluate using index",
+              "fullTitle": "mod should optionally evaluate using index",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const exray = new Exray(1, 2, 3);\nexray.mod((el, idx) => el * idx);\nexpect(exray).to.deep.equal([0, 2, 6])",
+              "err": {},
+              "uuid": "c0e3781a-a449-42c1-88db-15793d660ca3",
+              "parentUUID": "748f0b10-9313-45ee-92cd-68a2873faf9c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "65953bb9-96d4-48e4-b7bb-04e571e3d080",
+            "c0e3781a-a449-42c1-88db-15793d660ca3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "7c0b16e7-942c-43a6-b31a-413a211ae235",
+          "title": "groupBy",
+          "fullFile": "/home/szczepan/dev_projects/JavaScript/Array Extensions/exray/test/exrayTest.js",
+          "file": "/test/exrayTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should hashMap",
+              "fullTitle": "groupBy should hashMap",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const users = new Exray(\n  { name: 'Stinky Pete', group: 1 },\n  { name: \"Heckus Redeckus\", group: 1 },\n  { name: \"Hecktor Correcktor\", group: 2 }\n);\nconst userMap = users.groupBy('group');\nexpect(userMap).to.deep.equal({\n  '1': [\n    { name: 'Stinky Pete', group: 1 },\n    { name: 'Heckus Redeckus', group: 1 },\n  ],\n  '2': [\n    { name: 'Hecktor Correcktor', group: 2 },\n  ]\n});",
+              "err": {},
+              "uuid": "dec34650-8e14-47cb-be90-ddd1defd197a",
+              "parentUUID": "7c0b16e7-942c-43a6-b31a-413a211ae235",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should hashMap using Exray array",
+              "fullTitle": "groupBy should hashMap using Exray array",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const users = new Exray(\n  { name: 'Stinky Pete', group: 1 },\n  { name: \"Heckus Redeckus\", group: 1 },\n  { name: \"Hecktor Correcktor\", group: 2 }\n);\nconst userMap = users.groupBy('group');\nconst groupOne = userMap['1'];\nconst isInstanceOfStray = (groupOne instanceof Exray);\nexpect(isInstanceOfStray).to.be.true;",
+              "err": {},
+              "uuid": "4d4077ec-6050-45dd-b91f-666210aef29b",
+              "parentUUID": "7c0b16e7-942c-43a6-b31a-413a211ae235",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dec34650-8e14-47cb-be90-ddd1defd197a",
+            "4d4077ec-6050-45dd-b91f-666210aef29b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2203497f-41d8-4150-b04e-17739c787a6b",
+          "title": "split",
+          "fullFile": "/home/szczepan/dev_projects/JavaScript/Array Extensions/exray/test/exrayTest.js",
+          "file": "/test/exrayTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should split array into multiple chunks",
+              "fullTitle": "split should split array into multiple chunks",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const exray = new Exray(1, 2, 3, 4);\nconst splits = exray.split(2);\nexpect(splits).to.deep.equal([ [1, 2], [3, 4] ]);",
+              "err": {},
+              "uuid": "069372d7-b8e8-4727-96e3-0a9d4e148a6a",
+              "parentUUID": "2203497f-41d8-4150-b04e-17739c787a6b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "069372d7-b8e8-4727-96e3-0a9d4e148a6a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "77de77be-4178-4ea2-9b46-f9d6818f6e8d",
+          "title": "prepend",
+          "fullFile": "/home/szczepan/dev_projects/JavaScript/Array Extensions/exray/test/exrayTest.js",
+          "file": "/test/exrayTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should insert elements to the front of the array",
+              "fullTitle": "prepend should insert elements to the front of the array",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const exray = new Exray(3, 4);\nconst modified = exray.prepend(1, 2);\nexpect(modified).to.deep.equal([1, 2, 3, 4]);",
+              "err": {},
+              "uuid": "1e3d38db-e437-4074-a6b4-8b3d380bdde3",
+              "parentUUID": "77de77be-4178-4ea2-9b46-f9d6818f6e8d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1e3d38db-e437-4074-a6b4-8b3d380bdde3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "dd8fd8bf-0211-4bbe-ada6-56eb72be362c",
+          "title": "unique",
+          "fullFile": "/home/szczepan/dev_projects/JavaScript/Array Extensions/exray/test/exrayTest.js",
+          "file": "/test/exrayTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return an array of unique values",
+              "fullTitle": "unique should return an array of unique values",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const exray = new Exray(1, 2, 2, 5, 7, 5, 3);\nconst uniques = exray.unique();\nexpect(uniques).to.deep.equal([1, 2, 5, 7, 3]);",
+              "err": {},
+              "uuid": "f130c0c5-9593-41bd-b44c-18b79fffd87f",
+              "parentUUID": "dd8fd8bf-0211-4bbe-ada6-56eb72be362c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should take an optional filter function",
+              "fullTitle": "unique should take an optional filter function",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const exray = new Exray(1, 2, 2, 5, 7, 5, 3);\nconst uniques = exray.unique(el => el > 2);\nexpect(uniques).to.deep.equal([5, 7, 3]);",
+              "err": {},
+              "uuid": "a1bfd562-5af7-4e99-8fc7-be9603cb96ab",
+              "parentUUID": "dd8fd8bf-0211-4bbe-ada6-56eb72be362c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f130c0c5-9593-41bd-b44c-18b79fffd87f",
+            "a1bfd562-5af7-4e99-8fc7-be9603cb96ab"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "test/mochawesome"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

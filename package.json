@@ -1,0 +1,40 @@
+{
+  "name": "exray",
+  "version": "1.0.0",
+  "description": "An Extended Array class with helpful features.",
+  "main": "app.js",
+  "directories": {
+    "test": "test",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha --reporter mochawesome",
+    "test:dev": "mocha --reporter mochawesome --reporter-options reportDir=test/mochawesome --watch",
+    "test:browser": "live-server --port=9000 --open=/test/mochawesome/mochawesome.html",
+    "test:suite": "concurrently \"npm run test:dev\" \"npm run test:browser\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stkterry/exray.git"
+  },
+  "keywords": [
+    "Array",
+    "Extended"
+  ],
+  "author": "Steven K Terry <stkterry@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stkterry/exray/issues"
+  },
+  "homepage": "https://github.com/stkterry/exray#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "live-server": "^1.2.1",
+    "mocha": "^7.0.0",
+    "mochawesome": "^4.1.0"
+  },
+  "dependencies": {
+    "concurrently": "^5.0.2",
+    "save-dev": "0.0.1-security"
+  }
+}
