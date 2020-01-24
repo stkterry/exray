@@ -103,7 +103,7 @@ describe("prepend", () => {
   })
 });
 
-describe("unique", () => {
+describe("dedup", () => {
   it ("should return an array of unique values", () => {
     const exray = new Exray(1, 2, 2, 5, 7, 5, 3);
     const uniques = exray.unique();
@@ -116,3 +116,12 @@ describe("unique", () => {
     expect(uniques).to.deep.equal([5, 7, 3]);
   })
 });
+
+describe("pad", () => {
+  it ("should return a padded array", () => {
+    const exray = new Exray(1, 2, 3);
+    const padded = exray.pad(2);
+
+    expect(padded).to.deep.equal([0, 0, 1, 2, 3]);
+  })
+})
